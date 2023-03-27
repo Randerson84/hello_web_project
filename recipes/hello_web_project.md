@@ -6,8 +6,10 @@ the path
 any query parameters (passed in the URL)
 or body parameters (passed in the request body)
 POST 
-/sort-names
-names(string)
+/albums
+title(string)
+release_year(int)
+artist_id(int)
 
 2. Design the Response
 The route might return different responses, depending on the result.
