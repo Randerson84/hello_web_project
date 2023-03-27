@@ -21,9 +21,9 @@ class Application < Sinatra::Base
     return 'Some response data'
   end
   get '/hello' do
-    name = params[:name] # The value is 'Alice'
+    @name = params[:name]
 
-    return "Hello #{name}"
+    return erb(:index)
   end
   post '/submit' do
     name = params[:name]

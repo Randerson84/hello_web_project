@@ -10,10 +10,11 @@ describe Application do
     #GET /hello
 
     context 'GET /hello' do
-        it 'returns 200 OK' do
-            response = get('/hello')
+        it 'returns Hello Ray!' do
+            response = get('/hello?name=Ray')
 
             expect(response.status).to be(200)
+            expect(response.body).to include('<h1>Hello Ray!</h1>')
         end
     end
      #GET /names
